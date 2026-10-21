@@ -1,473 +1,764 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>健康への興味を、人の役に立つ仕事へ｜1日体験講座</title>
-<meta name="description" content="健康や身体のことに興味がある方へ。姿勢を見て、手で施術し、毎日の身体づくりを支える「カイロプラクティック」という仕事を、1日で体験する初心者向けの講座です。福岡市・福津市・久留米市で開催。">
-<meta property="og:title" content="健康への興味を、人の役に立つ仕事へ｜1日体験講座">
-<meta property="og:description" content="姿勢を見て、手で施術し、毎日の身体づくりを支える。カイロプラクティックという仕事を、まず1日体験してみませんか。">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>健康への興味を、人の役に立つ仕事へ｜カイロプラクティックの基本講座</title>
+<meta name="description" content="健康や身体に興味がある方へ。カイロプラクティックがどんな仕事かを、身体の見方と手を使った基本を体験しながら知る、初心者向けの1日講座です。経験は問いません。">
 <meta name="theme-color" content="#F7F4EC">
+<meta property="og:title" content="健康への興味を、人の役に立つ仕事へ｜カイロプラクティックの基本講座">
+<meta property="og:description" content="初心者向けの1日講座。カイロプラクティックの基本を、体験しながら学びます。">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ivory:#F7F4EC; --beige:#E9E1D3; --green:#7F8F7A; --green-d:#66765F;
-  --brown:#403A35; --white:#FFFFFF; --line:#D9CFBD;
+  --ivory:#F7F4EC;
+  --beige:#E9E1D3;
+  --sage:#7F8F7A;
+  --sage-deep:#566650;
+  --brown:#403A35;
+  --brown-soft:#6B635B;
+  --white:#FFFFFF;
+  --line:#D9D0BF;
+  --radius:14px;
+
+  /* 3つの講座の色（LINEのメニューと同じ「緑・オレンジ・青」） */
+  --free:#566650;   --free-tint:#E4EADF;
+  --one:#A8643A;    --one-tint:#F5E6D4;
+  --master:#4A6485; --master-tint:#DCE6F0;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:8px;-webkit-text-size-adjust:100%}
 body{
-  font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
-  background:var(--ivory); color:var(--brown);
-  font-size:16px; line-height:1.9; -webkit-text-size-adjust:100%;
-  padding-bottom:84px;
+  margin:0;background:var(--ivory);color:var(--brown);
+  font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  font-size:16px;line-height:1.85;font-weight:400;
+  padding-bottom:72px;
 }
 img{max-width:100%;display:block}
-.wrap{max-width:640px;margin:0 auto;padding:0 20px}
-section{padding:56px 0}
-section.alt{background:var(--beige)}
-h1,h2,h3{line-height:1.5;font-weight:700}
-h1{font-size:26px;margin:6px 0 14px}
-h2{font-size:22px;margin-bottom:22px;text-align:center}
-h3{font-size:17px;margin-bottom:8px}
-p{margin-bottom:14px}
-.eyebrow{font-size:14px;color:var(--green-d);font-weight:700;letter-spacing:.04em}
-.lead{font-size:15px}
-.note{font-size:13px;color:#6b635b;line-height:1.7}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
-.badges span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13px}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3,h4{margin:0;font-weight:700;line-height:1.5}
+ul,dl{margin:0;padding:0;list-style:none}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+section{padding:48px 0}
+.sec-beige{background:var(--beige)}
+.sec-white{background:var(--white)}
+.small{font-size:14px;color:var(--brown-soft);line-height:1.8}
+.note{font-size:13px;color:var(--brown-soft);line-height:1.7}
+.nw{white-space:nowrap}
+
+/* buttons */
 .btn{
-  display:block;text-align:center;background:var(--green);color:var(--white);
-  font-weight:700;text-decoration:none;border-radius:10px;padding:16px 12px;
-  font-size:16px;box-shadow:0 2px 0 var(--green-d);
+  display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;
+  min-height:56px;padding:14px 22px;border-radius:999px;text-decoration:none;
+  font-weight:700;font-size:16px;line-height:1.4;border:2px solid var(--sage-deep);
+  transition:transform .15s ease,background .15s ease;
 }
-.btn:active{transform:translateY(1px);box-shadow:none}
-.btn-sub{
-  display:block;text-align:center;background:transparent;color:var(--green-d);
-  border:1px solid var(--green);border-radius:10px;padding:11px 12px;
-  font-size:14px;text-decoration:none;font-weight:500;
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--sage-deep);color:var(--white)}
+.btn-primary:hover{background:#4a5845}
+.btn-ghost{background:transparent;color:var(--sage-deep)}
+.btn-ghost:hover{background:rgba(127,143,122,.12)}
+.btn .arrow{font-size:14px}
+.btn-stack{display:grid;gap:12px;margin-top:22px}
+a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
+
+/* ---------- ファーストビュー ---------- */
+.hero{padding:34px 0 36px;background:
+  radial-gradient(circle at 100% 0,rgba(127,143,122,.20) 0,rgba(127,143,122,0) 55%),
+  linear-gradient(180deg,var(--beige) 0,var(--ivory) 100%)}
+.hero .regions{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-bottom:18px}
+.hero .region{display:inline-block;white-space:nowrap;font-size:13px;letter-spacing:.1em;font-weight:500;color:var(--sage-deep);border:1px solid var(--sage);border-radius:999px;padding:3px 14px;background:rgba(255,255,255,.55)}
+.hero .region-sub{font-size:13px;letter-spacing:.08em;color:var(--brown-soft);font-weight:500;white-space:nowrap}
+.hero h1{font-size:28px;line-height:1.55;letter-spacing:.01em;margin-bottom:16px}
+.hero h1 .l1{display:block;font-size:21px;color:var(--sage-deep);margin-bottom:6px}
+.kosa-banner{background:var(--sage-deep);color:#fff;border-radius:12px;padding:13px 16px;margin:0 0 16px;line-height:1.6}
+.kosa-banner b{display:block;font-size:13px;letter-spacing:.08em;opacity:.9}
+.kosa-banner span{display:block;font-size:19px;font-weight:700}
+.kosa-banner small{display:block;font-size:13px;margin-top:2px;opacity:.95}
+.hero-photo{margin:0 0 14px}
+.hero-photo img{width:100%;border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;background:var(--beige)}
+.hero-photo figcaption{font-size:12.5px;color:var(--brown-soft);margin-top:6px}
+.about{background:rgba(255,255,255,.78);border:1px solid var(--line);border-left:5px solid var(--sage);border-radius:var(--radius);padding:14px 16px 6px;margin:0 0 14px}
+.about .about-t{font-size:13px;letter-spacing:.1em;font-weight:700;color:var(--sage-deep);margin-bottom:6px}
+.about p{font-size:15px;line-height:1.85;margin:0 0 .8em}
+.chip{display:inline-block;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:6px 13px;font-size:14px;font-weight:500;line-height:1.5}
+.chip b{color:var(--sage-deep)}
+
+/* 3つの講座（LINEのメニューと同じ並び） */
+.paths-t{margin:26px 0 10px;font-size:15px;font-weight:700;display:flex;align-items:center;gap:10px}
+.paths-t::after{content:"";flex:1;height:1px;background:var(--line)}
+.paths{display:grid;gap:10px}
+.path{
+  --c:var(--free);--t:var(--free-tint);
+  display:grid;grid-template-columns:1fr auto;grid-template-areas:"top arrow" "title arrow" "copy arrow";
+  column-gap:10px;align-items:center;
+  background:var(--t);border-radius:var(--radius);border-left:7px solid var(--c);
+  padding:14px 14px 14px 16px;text-decoration:none;
 }
-.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
-.main-info{background:var(--white);border:2px solid var(--green);border-radius:12px;padding:18px 18px 8px;margin:20px 0 14px}
-.main-info .tag{display:inline-block;background:var(--green);color:var(--white);font-size:12px;border-radius:4px;padding:1px 10px;margin-bottom:6px}
-.main-info .date{font-size:20px;font-weight:700}
-.main-info ul{list-style:none;margin:8px 0}
-.main-info li{font-size:15px;line-height:1.8}
-.sub-info{font-size:14px;line-height:1.8;margin:14px 0 20px}
-.sub-info li{margin-left:1.2em}
-figure{margin:22px 0}
-figure img{width:100%;border-radius:10px;object-fit:cover;aspect-ratio:4/3}
-figcaption{font-size:12px;color:#7a7168;margin-top:4px}
-ul.check{list-style:none}
-ul.check li{padding-left:1.6em;position:relative;margin-bottom:8px}
-ul.check li::before{content:"□";position:absolute;left:0;color:var(--green-d)}
-ul.dot{list-style:none}
-ul.dot li{padding-left:1.1em;position:relative;margin-bottom:6px}
-ul.dot li::before{content:"・";position:absolute;left:0}
-.grid2{display:grid;gap:12px}
-.exp b{display:block;color:var(--green-d);font-size:15px}
-.exp p{font-size:14px;line-height:1.7;margin:2px 0 0}
-.side{background:var(--white);border-left:4px solid var(--green);border-radius:8px;padding:16px 18px;margin-top:20px}
-.side h3{font-size:15px}
-.side p{font-size:14px;margin:0}
-.day{border-top:1px solid var(--line);padding:16px 0}
-.day:last-of-type{border-bottom:1px solid var(--line)}
-.day .tag{display:inline-block;font-size:12px;background:var(--beige);border-radius:4px;padding:1px 9px;margin-bottom:4px}
-.day .price{font-size:20px;font-weight:700}
-.day dl{font-size:14px;line-height:1.8;margin-top:6px}
-.day dt{float:left;clear:left;width:3.5em;color:#7a7168}
-.day dd{margin-left:3.5em}
-.voice{background:var(--white);border-radius:12px;padding:18px;margin-bottom:14px;font-size:15px}
-.voice .q{font-weight:700;margin-bottom:6px}
-.voice .by{font-size:13px;color:#7a7168;margin:0}
-.src{font-size:13px;color:#6b635b;margin-bottom:14px}
-details{background:var(--white);border:1px solid var(--line);border-radius:10px;margin:12px 0;padding:0 16px}
-details summary{cursor:pointer;padding:13px 0;font-weight:500;font-size:15px;list-style:none}
-details summary::-webkit-details-marker{display:none}
-details summary::before{content:"＋ ";color:var(--green-d)}
-details[open] summary::before{content:"－ "}
-details > div{padding:0 0 14px;font-size:14px;line-height:1.8}
-.flow{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0}
-.flow ol{list-style:none;counter-reset:s}
-.flow li{counter-increment:s;padding-left:2.2em;position:relative;margin-bottom:10px;font-size:15px;line-height:1.6}
-.flow li::before{content:counter(s);position:absolute;left:0;top:0;width:1.6em;height:1.6em;border-radius:50%;background:var(--green);color:#fff;font-size:12px;text-align:center;line-height:1.6em}
-.flow li small{display:block;color:#7a7168;font-size:12px}
-.faq-q{font-weight:700;margin-bottom:2px}
-.faq-a{margin-bottom:16px;font-size:15px}
-footer{background:var(--brown);color:#E9E1D3;padding:32px 0 20px;font-size:13px;line-height:1.8;text-align:center}
-.sticky{
-  position:fixed;left:0;right:0;bottom:0;z-index:20;
-  background:rgba(247,244,236,.96);border-top:1px solid var(--line);
-  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+.path.one{--c:var(--one);--t:var(--one-tint)}
+.path.master{--c:var(--master);--t:var(--master-tint)}
+.path .p-top{grid-area:top;display:flex;align-items:center;gap:8px;margin-bottom:2px}
+.path .p-step{background:var(--white);color:var(--c);font-size:12.5px;font-weight:700;padding:1px 12px;border-radius:999px;letter-spacing:.06em}
+.path .p-meta{font-size:12.5px;color:var(--brown-soft);font-weight:500}
+.path .p-title{grid-area:title;font-size:21px;line-height:1.4;color:var(--c)}
+.path .p-copy{grid-area:copy;font-size:14.5px;line-height:1.6}
+.path .p-arrow{grid-area:arrow;width:34px;height:34px;border-radius:50%;background:var(--c);color:var(--white);display:grid;place-items:center;font-size:18px;line-height:1}
+.paths-note{margin:12px 2px 0;font-size:14px;color:var(--brown-soft);line-height:1.8}
+
+/* きっかけ */
+.kikkake{padding:38px 0 40px}
+.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--sage-deep);font-weight:500;margin-bottom:8px}
+.kk-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 18px}
+.kk{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 12px;font-size:14.5px;font-weight:500;line-height:1.6;text-align:center;display:flex;align-items:center;justify-content:center;min-height:64px}
+.kk-end{margin:0;font-size:15.5px}
+
+/* 講座セクション共通 */
+.course{--c:var(--free);--t:var(--free-tint)}
+.course.one{--c:var(--one);--t:var(--one-tint)}
+.course.master{--c:var(--master);--t:var(--master-tint)}
+.course{border-top:6px solid var(--c)}
+.course .step{display:inline-block;background:var(--c);color:var(--white);font-size:13px;letter-spacing:.1em;padding:2px 16px;border-radius:999px;font-weight:700;margin-bottom:10px}
+.course h2{font-size:26px;line-height:1.4;margin-bottom:4px}
+.course .for{font-size:14.5px;font-weight:500;color:var(--c);margin-bottom:12px}
+.course .price{display:inline-block;background:var(--t);color:var(--brown);border-radius:8px;padding:3px 12px;font-weight:700;font-size:15px;margin:0 0 14px}
+.meta-line{font-size:15px;margin-bottom:12px}
+.course .pair{margin:-6px 0 14px;font-size:15px;font-weight:700;color:var(--c)}
+.course ul.learn{margin:6px 0 18px;border-top:1px solid var(--line)}
+.course ul.learn li{padding:9px 4px 9px 28px;border-bottom:1px solid var(--line);position:relative;font-size:15.5px}
+.course ul.learn li::before{content:"✓";position:absolute;left:4px;color:var(--c);font-weight:700}
+.course .btn{border-color:var(--c)}
+.course .btn-ghost{color:var(--c)}
+.course .btn-ghost:hover{background:var(--t)}
+.course .btn-primary{background:var(--c);color:var(--white)}
+.course .btn-primary:hover{filter:brightness(.93)}
+
+/* 写真（横にスライド） */
+.strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:4px -20px 20px;padding:0 20px 6px;-webkit-overflow-scrolling:touch}
+.strip figure{margin:0;flex:0 0 76%;scroll-snap-align:center}
+.strip img{width:100%;border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;background:var(--beige)}
+.strip figcaption{font-size:12.5px;color:var(--brown-soft);margin-top:6px}
+
+/* 日程・申込み */
+.sched{margin-top:26px;padding:22px 18px 20px;background:var(--white);border:2px solid var(--c);border-radius:var(--radius)}
+.sched h3{font-size:19px;margin-bottom:14px}
+.dates{display:grid;gap:8px;margin-bottom:16px}
+.dateitem{display:flex;align-items:center;gap:14px;background:var(--t);border-radius:12px;padding:10px 16px}
+.dateitem .dd{font-size:28px;font-weight:700;line-height:1.1;letter-spacing:.01em}
+.dateitem .dd small{font-size:14px;font-weight:500;margin-left:3px}
+.dateitem .dk{font-size:14px;line-height:1.5}
+.sched dl{margin:0 0 6px}
+.sched .row{display:flex;gap:12px;padding:5px 0;font-size:15.5px}
+.sched .row dt{flex:none;width:3.4em;color:var(--brown-soft);font-size:13.5px;padding-top:2px}
+.sched .row dd{margin:0}
+.perks{display:flex;flex-direction:column;gap:6px;margin:8px 0 4px;padding-top:12px;border-top:1px dashed var(--line)}
+.perks li{font-size:14.5px;padding-left:18px;position:relative;line-height:1.7}
+.perks li::before{content:"●";position:absolute;left:0;color:var(--c);font-size:10px;top:5px}
+.sched .apply-lead{margin:16px 0 0;text-align:center;font-size:15px}
+
+/* 開閉 */
+details{background:var(--white);border:1px solid var(--line);border-radius:12px;margin-top:12px}
+details>summary{list-style:none;cursor:pointer;padding:15px 44px 15px 18px;font-weight:700;font-size:15.5px;position:relative;line-height:1.6}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--c,var(--sage-deep));font-size:18px;font-weight:700}
+details[open]>summary::after{content:"－"}
+details .inner{padding:2px 18px 18px;font-size:15.5px}
+details .inner h4{font-size:15px;color:var(--c,var(--sage-deep));margin:14px 0 4px}
+details .inner p{margin-bottom:.7em}
+details .inner h4:first-child{margin-top:4px}
+.sec-beige details{background:var(--ivory)}
+.sched details{background:var(--ivory)}
+
+/* 声 */
+.score{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px;font-size:15.5px}
+.score b{color:var(--c,var(--sage-deep))}
+.voice{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:10px}
+.voice q{display:block;quotes:none;font-weight:500;font-size:16px;line-height:1.85}
+.voice .by{display:block;font-size:13px;color:var(--brown-soft);margin-top:8px}
+.voice .head{font-size:13px;color:var(--c,var(--sage-deep));font-weight:700;margin-bottom:6px}
+.voice .body{margin:0;font-size:15.5px;line-height:1.85}
+.voice.lined{border-left:4px solid var(--c,var(--sage))}
+.voice-block{margin-top:26px}
+.hero .chirobox{margin:16px 0 4px}
+.chirobox{background:rgba(255,255,255,.7);border-left:4px solid var(--c,var(--sage-deep));border-radius:8px;padding:12px 14px;margin:0 0 16px;font-size:14.5px;line-height:1.8}
+.chirobox b{color:var(--c,var(--sage-deep))}
+details.halffold{margin-top:22px}
+details.halffold>.sched{margin:0 10px 12px;box-shadow:none}
+.voice-block h3.sub-t{font-size:18px;margin-bottom:14px}
+
+/* 講師 */
+.profile{display:grid;gap:18px;align-items:start}
+.profile img{width:100%;border-radius:var(--radius);aspect-ratio:1/1;object-fit:cover;background:var(--beige)}
+.profile .role{font-size:14px;color:var(--sage-deep);font-weight:500;margin-bottom:0}
+.profile .name{font-size:26px;font-weight:700;margin-bottom:14px;letter-spacing:.06em}
+h2.title{font-size:23px;margin-bottom:20px;letter-spacing:.02em}
+h2.title::after{content:"";display:block;width:36px;height:3px;background:var(--sage);margin-top:12px;border-radius:2px}
+
+/* FAQ・最後 */
+.faq details{margin-top:10px}
+.final{background:var(--sage-deep);color:var(--white);text-align:center}
+.final h2{font-size:24px;margin-bottom:16px;line-height:1.6}
+.final .btn-primary{background:var(--white);color:var(--sage-deep);border-color:var(--white)}
+.final .btn-ghost{color:var(--white);border-color:rgba(255,255,255,.8)}
+.final .btn-ghost:hover{background:rgba(255,255,255,.12)}
+.final .lines{margin-bottom:18px;font-size:16.5px}
+footer{padding:30px 0 26px;background:var(--brown);color:#E9E1D3;font-size:13.5px;line-height:1.9;text-align:center}
+footer b{display:block;color:var(--white);font-size:15px;margin-bottom:2px}
+
+/* 画面下の3講座タブ（ファーストビューを過ぎたら表示） */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);transition:transform .25s ease;box-shadow:0 -2px 10px rgba(64,58,53,.08)}
+.tabs.show{transform:translateY(0)}
+.tabs a{--c:var(--free);--t:var(--free-tint);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:56px;padding:5px 2px;text-decoration:none;border-top:4px solid transparent;line-height:1.3;color:var(--brown-soft);font-size:11.5px;font-weight:500}
+.tabs a.one{--c:var(--one);--t:var(--one-tint)}
+.tabs a.master{--c:var(--master);--t:var(--master-tint)}
+.tabs a b{font-size:14px;color:var(--brown)}
+.tabs a.on{border-top-color:var(--c);background:var(--t)}
+.tabs a.on b{color:var(--c)}
+
+@media (min-width:640px){
+  body{font-size:17px}
+  .hero{padding:64px 0 52px}
+  .hero h1{font-size:36px}
+  .hero h1 .l1{font-size:23px}
+  section{padding:68px 0}
+  .strip{margin:4px 0 20px;padding:0;overflow:visible;display:grid;grid-template-columns:repeat(2,1fr)}
+  .strip figure{flex:none}
+  .profile{grid-template-columns:200px 1fr;gap:28px}
+  .kk-grid{grid-template-columns:repeat(4,1fr)}
+  .paths{grid-template-columns:1fr}
 }
-.sticky .btn{max-width:600px;margin:0 auto;padding:14px 12px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tabs,.btn{transition:none}}
+p,h1,h2,h3,li,q{text-wrap:pretty}
+h1,h2{text-wrap:balance}
 </style>
 </head>
 <body>
 
-<!-- ファーストビュー -->
-<section style="padding-top:32px">
+<!-- ============ ファーストビュー：3つの講座を、いちばん上で選べるように ============ -->
+<header class="hero" id="top">
   <div class="wrap">
-    <h1 style="font-size:26px;margin:0 0 16px">健康のこと、身体のこと。<br>その興味を、<br>人の役に立つ仕事へ。</h1>
+    <div class="regions"><span class="region">福岡・福津</span><span class="region-sub">健康・身体に興味がある方へ</span></div>
+    <h1><span class="l1">健康のこと、身体のこと。</span>その興味を、<br>人の役に立つ仕事へ。</h1>
+    <div class="kosa-banner"><b>仕事に興味がある方への講座のご案内</b><span>カイロプラクティックの基本講座</span><small>1日・半日｜10/28・10/31・11/3・12/20<br>福津市・福岡市博多区</small></div>
 
-    <figure style="margin:0 0 20px">
-      <img src="img-work.jpg" alt="手を使って施術している様子" style="aspect-ratio:3/2;object-position:center top" onerror="this.closest('figure').style.display='none'">
-      <figcaption>※施術の様子</figcaption>
+    <figure class="hero-photo" data-img="model">
+      <img alt="骨格模型を使ってカイロプラクティックの基本を説明する安藤真奈美" fetchpriority="high">
+      <figcaption>※過去の講座の様子</figcaption>
     </figure>
-    <p style="font-size:16px;line-height:1.8;margin-bottom:10px">姿勢を見て、手で施術し、<br>毎日の身体づくりを支える。<br><br><b>カイロプラクティック</b>を学んで、<br>人の健康を支える技術を身につけてみませんか。</p>
-    <p style="font-size:18px;font-weight:700;color:var(--green-d);line-height:1.6;margin-bottom:12px">まずは、どんな施術なのか。<br>1日講座で、基本から学んでみませんか。</p>
-    <p class="lead">身体の見方と、手を使った施術の基本を、体験しながら学ぶ初心者向けの1日講座です。</p>
 
-    <div class="main-info">
-      <span class="tag">1日講座・メイン日程</span>
-      <p class="date">10/18（日）9:45〜16:00</p>
-      <ul>
-        <li>会場：アクシオン福岡（博多区・駐車場あり）</li>
-        <li>参加費：10,000円（お弁当付き）</li>
-      </ul>
+    <div class="about">
+      <div class="about-t">経験は、いりません</div>
+      <p>「そんな仕事があるなら、やってみたい。」</p>
+      <p><b>どんな仕事なのかを、体験しながら知る1日です。</b>身体の見方と、手を使った施術の基本を学びます。仕事にするかどうか、まだ決めていない方も参加できます。</p>
     </div>
-    <a class="btn" href="https://forms.gle/NNU9E57W4fqY8zD19" target="_blank" rel="noopener">1日体験に申し込む →</a>
-    <p style="font-size:13px;text-align:center;line-height:1.8;margin:8px 0 0;color:#5a524b">お申し込み後、自動メールが届きます。<br>その後、講師の安藤から個別にご連絡します。<br>参加費は当日のお支払いです。</p>
-    <details style="margin:10px 0 0;padding:0 14px">
-      <summary style="font-size:13px;padding:10px 0">持ち物・服装・キャンセルについて</summary>
-      <div>
-        <ul class="dot" style="font-size:14px">
-          <li><b>持ち物</b>：タオル、筆記具、飲み物</li>
-          <li><b>服装</b>：動きやすい服装（ジーンズ・フード付きの服はご遠慮ください）／靴下をご着用ください</li>
-          <li><b>キャンセル（1日版のみ）</b>：お弁当手配のため、開催日の3日前からのキャンセルは、1,000円のキャンセル料をいただきます。</li>
-        </ul>
+    <span class="chip"><b>初心者歓迎</b>｜男女参加OK｜経験不問</span>
+
+    <div class="chirobox"><b>カイロプラクティックは、どんな仕事？</b><br>背骨や骨盤に着目して、手で身体を整えていく方法です。体操・食事・生活習慣など、身体全体から健康を考えます。施術だけでなく、毎日の身体づくりも支える仕事です。</div>
+
+    <p class="paths-t">講座は3つ。気になるところから</p>
+    <nav class="paths" aria-label="講座を選ぶ">
+      <a class="path free" href="#free" data-track="path_click" data-where="free">
+        <span class="p-top"><span class="p-step">体験編</span><span class="p-meta">無料</span></span>
+        <b class="p-title">無料姿勢講座</b>
+        <span class="p-copy">まずは、自分の身体を知る</span>
+        <span class="p-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="path one" href="#oneday" data-track="path_click" data-where="oneday">
+        <span class="p-top"><span class="p-step">実践編</span><span class="p-meta">10,000円・お弁当付き</span></span>
+        <b class="p-title">1日講座</b>
+        <span class="p-copy">1日：10/31（土）・12/20（日）<br>半日版：10/28（水）・11/3（火・祝）<br>どんな仕事かを、体験して知る</span>
+        <span class="p-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="path master" href="#master" data-track="path_click" data-where="master">
+        <span class="p-top"><span class="p-step">マスター編</span><span class="p-meta">3泊4日</span></span>
+        <b class="p-title">初級セミナー</b>
+        <span class="p-copy">学んだことを、仕事につなげる</span>
+        <span class="p-arrow" aria-hidden="true">›</span>
+      </a>
+    </nav>
+    <p class="paths-note">体験編から順番に受ける必要はありません。<br>気になる講座から、どうぞ。</p>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ きっかけ（4つを短く） ============ -->
+<section class="kikkake" id="worries">
+  <div class="wrap">
+    <div class="eyebrow">こんな思いはありませんか？</div>
+    <div class="kk-grid">
+      <div class="kk">健康や身体の<br>しくみを知るのが好き</div>
+      <div class="kk">身体に関わる仕事が<br>少し気になる</div>
+      <div class="kk">新しい学びや<br>仕事の選択肢がほしい</div>
+      <div class="kk">いつか自宅で<br>施術院を持ちたい</div>
+    </div>
+    <p class="kk-end">カイロプラクティックが仕事になることを、知らなかった。そんな方も、少なくありません。</p>
+    <p class="kk-end" style="margin-top:12px">まずは、どんな仕事なのかを、体験しながら知ってみる。<b>続けるかどうかは、そのあとで考えても大丈夫です。</b></p>
+  </div>
+</section>
+
+<!-- ============ 体験編 ============ -->
+<section id="free" class="course sec-white">
+  <div class="wrap">
+    <span class="step">体験編</span>
+    <h2>無料姿勢講座</h2>
+    <p class="for">まずは、自分の姿勢を確認したい方へ</p>
+    <div class="price">約60分／マンツーマン／無料</div>
+    <p class="meta-line">会場：レディースカイロうらら・福津市</p>
+    <p>AI姿勢分析を使い、<br>今の姿勢と身体のつながりを一緒に確認します。</p>
+    <p>参加をご希望の方は、<br>LINEで「無料姿勢講座希望」とお送りください。<br>日程をご案内します。</p>
+    <a class="btn btn-primary" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener" data-track="line_click" data-where="free_course">LINEで「無料姿勢講座希望」と送る <span class="arrow">▶</span></a>
+  </div>
+</section>
+
+<!-- ============ 実践編 ============ -->
+<section id="oneday" class="course one sec-beige">
+  <div class="wrap">
+    <span class="step">実践編</span>
+    <h2>1日講座</h2>
+    <p class="for">カイロプラクティックがどんな仕事か、基本から体験したい方へ</p>
+    <div class="price">10,000円・お弁当付き</div>
+    <p class="pair">ペア割：お2人で15,000円</p>
+    <p>身体のしくみを学び、<br>手を使った施術の基本を、受講生どうしで体験します。</p>
+
+    <ul class="learn">
+      <li>骨盤や背骨のつながり</li>
+      <li>姿勢を見るときの基本のポイント</li>
+      <li>骨盤調整の基本を体験</li>
+      <li>運動・栄養・睡眠と、身体づくりの関係</li>
+      <li>個別相談（学び方や、仕事につなげるまでの流れ）</li>
+    </ul>
+
+    <div class="strip" id="gallery" aria-label="講座の様子">
+      <figure data-img="practice">
+        <img alt="マットの上で、講師の説明を受けながら実技を行う受講の様子" loading="lazy">
+        <figcaption>※過去の講座の様子</figcaption>
+      </figure>
+      <figure data-img="lecture">
+        <img alt="受講生に向けて説明する安藤真奈美" loading="lazy">
+        <figcaption>※過去の講座の様子</figcaption>
+      </figure>
+    </div>
+
+    <p>お一人でも、ご友人との参加でも歓迎です。<br>実技は受講生どうしで行います。</p>
+    <p class="note">※1日講座は、基本を体験する初心者向けの講座です。技術を完成させる講座ではありません。</p>
+
+    <details>
+      <summary>1日の流れを見る</summary>
+      <div class="inner">
+        <h4>午前｜まずは、身体の見方を知る</h4>
+        <p>・問診と、姿勢の写真撮影<br>・カイロプラクティックの講義<br>・初級セミナーのご案内</p>
+        <h4>お昼｜お弁当つき</h4>
+        <h4>午後｜実技を体験して、相談する</h4>
+        <p>・受講生どうしで、骨盤調整の基本を体験<br>・運動・食事・睡眠と、身体づくりの関係<br>・個別相談（学び方や、仕事につなげるまでの流れ）</p>
       </div>
     </details>
-    <p style="font-size:12px;text-align:center;margin:6px 0 0"><a href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener" style="color:#6b635b;text-decoration:underline">ご質問はLINEでお気軽にどうぞ</a></p>
 
-    <div class="badges"><span>少人数制</span><span>初心者歓迎</span><span>男女参加OK</span></div>
+    <details>
+      <summary>すでにセラピストの方へ</summary>
+      <div class="inner"><p>マッサージ、エステ、ヨガ、ピラティスなど、今のお仕事の経験がある方も参加できます。<br>骨格から身体を見るカイロプラクティックの考え方を、1日で体験できます。</p></div>
+    </details>
 
-    <p style="font-size:14px;text-align:center;margin:14px 0 0">福津・久留米でも開催します。<br><a href="#schedule" style="color:var(--green-d);text-decoration:underline">ほかの日程を見る</a></p>
+    <!-- 1日講座の感想（掲載の了承済み・お名前なし）。非表示にしたいときは CONFIG.showSurveyVoices を false に -->
+    <details data-survey>
+      <summary>1日講座に参加された方の声</summary>
+      <div class="inner">
+        <div class="voice lined"><q>「とても分かりやすい講座でした。」</q></div>
+        <div class="voice lined"><q>「知らなかったことを知れて、久しぶりに学びが楽しいと思えました。」</q></div>
+        <div class="voice lined"><q>「色んな方とお話することができて、視野が広がりました。」</q></div>
 
-  </div>
-</section>
-
-<!-- 迷い -->
-<section class="alt">
-  <div class="wrap">
-    <h2>こんな思いはありませんか？</h2>
-    <ul class="check">
-      <li>健康や身体のしくみを知るのが好き</li>
-      <li>自分や家族の身体のために、何か学んでみたい</li>
-      <li>家族や身近な人が「身体がつらい」と話すとき、何かしてあげられたら、と思うことがある</li>
-      <li>これからの自分に、新しい学びや仕事の選択肢がほしい</li>
-      <li>経験はないけれど、身体に関わる仕事が少し気になる</li>
-    </ul>
-    <p class="note">※いつか自宅などで自分の施術院を持ちたい、という方にも向いています。</p>
-  </div>
-</section>
-
-<!-- どんな仕事 -->
-<section>
-  <div class="wrap">
-    <h2>カイロプラクティックは、<br>どんな仕事？</h2>
-    <p>背骨や骨盤に着目して、手で身体を整えていく方法です。体操・食事・生活習慣など、身体全体から健康を考えます。</p>
-    <ul class="dot">
-      <li>身体の悩みを聞き、姿勢や身体の状態を確認する</li>
-      <li>骨盤や背骨に着目して、手で施術する</li>
-      <li>動く・食べる・寝るなど、毎日の身体づくりもお伝えする</li>
-    </ul>
-    <p style="margin-top:14px">施術だけでなく、毎日の身体づくりも支える仕事です。</p>
-
-  </div>
-</section>
-
-<!-- 1日講座で体験・確認できること -->
-<section class="alt">
-  <div class="wrap">
-    <h2>1日講座で、<br>体験・確認できること</h2>
-    <p style="text-align:center">実際に見て、触れて、体験しながら学びます。</p>
-    <p class="note" style="text-align:center">以下は10/18・10/19の内容です</p>
-
-    <h3>この1日で学べること</h3>
-    <ul class="dot">
-      <li>骨盤や背骨が、どうつながっているかを知る</li>
-      <li>姿勢を見るときの基本のポイントを学ぶ</li>
-      <li>講師と一緒に、骨盤調整の基本を体験する</li>
-      <li>運動・栄養・睡眠と、身体づくりの関係を学ぶ</li>
-    </ul>
-    <p style="margin-top:12px">もっと学びたい方には、その先の講座もあります。</p>
-    <p style="margin-top:12px;font-size:14px">身体の知識や施術の経験がない方に向けた講座です。</p>
-
-    <figure>
-      <img src="img-practice.jpg" alt="畳の部屋で実技を行っている様子" onerror="this.closest('figure').style.display='none'">
-      <figcaption>※過去の講座の様子（実技）</figcaption>
-    </figure>
-
-    <div class="flow" style="margin-top:20px">
-      <h3 style="margin-top:0">1日の流れ（10/18）</h3>
-      <p style="font-size:14px;margin:0 0 4px"><b>午前</b></p>
-      <ul class="dot" style="font-size:14px">
-        <li>問診・写真撮影</li>
-        <li>カイロプラクティックの講義</li>
-        <li>初級セミナーのご案内</li>
-      </ul>
-      <p style="font-size:14px;margin:8px 0"><b>昼食・休憩</b></p>
-      <p style="font-size:14px;margin:0 0 4px"><b>午後</b></p>
-      <ul class="dot" style="font-size:14px">
-        <li>基本の実技を体験</li>
-        <li>運動・栄養・睡眠など、生活習慣について学ぶ</li>
-        <li>個別相談<small style="display:block;color:#7a7168;font-size:12px">学び方や、仕事につなげるまでの流れについて</small></li>
-      </ul>
+        <details>
+          <summary>ほかの感想も読む</summary>
+          <div class="inner">
+            <div class="voice lined"><q>「先生方みなさん明るく快活なのが印象的で、体が好調だとメンタルにも現れるのだなと思いました。参加してとてもよかったです。」</q></div>
+            <div class="voice lined"><q>「楽しいセミナーでした。」</q></div>
+            <div class="voice lined"><q>「今日は、すべてよい学びとなりました。」</q></div>
           </div>
-
-    <p style="margin-top:12px">技術を完成させる講座ではありません。</p>
-    <p class="note">※診断や治療を行う講座ではありません。</p>
-
-    <div class="side">
-      <h3>すでにセラピストの方へ</h3>
-      <p>マッサージ、エステ、ヨガ、ピラティスなど、今の仕事の経験がある方も参加できます。骨格から体を見るカイロプラクティックの考え方を、1日で体験できます。</p>
-    </div>
-  </div>
-</section>
-
-<!-- 開催日程 -->
-<section id="schedule">
-  <div class="wrap">
-    <h2>開催日程</h2>
-
-    <div class="day">
-      <span class="tag">1日版・メイン</span>
-      <p class="price">10/18（日）　10,000円</p>
-      <dl>
-        <dt>時間</dt><dd>9:45〜16:00（お弁当付き）</dd>
-        <dt>会場</dt><dd>アクシオン福岡<br>福岡市博多区東平尾公園2丁目1-4（駐車場あり）</dd>
-        <dt>特典</dt><dd>ペア割 お2人で15,000円／小さなお子さんの無料お預かり</dd>
-      </dl>
-    </div>
-
-    <div class="day">
-      <span class="tag">1日版</span>
-      <p class="price">10/19（月）　10,000円</p>
-      <dl>
-        <dt>時間</dt><dd>10:00〜15:30（お弁当付き）</dd>
-        <dt>会場</dt><dd>レディースカイロうらら<br>福津市花見ヶ丘1-9-8 ソレイユ105（駐車場あり）</dd>
-        <dt>特典</dt><dd>ペア割 お2人で15,000円／小さなお子さんの無料お預かり</dd>
-      </dl>
-    </div>
-
-    <div class="day">
-      <span class="tag">1日版・美容テーマ</span>
-      <p class="price">10/21（水）　10,000円</p>
-      <dl>
-        <dt>時間</dt><dd>10:00〜16:00（昼食付き）</dd>
-        <dt>会場</dt><dd>久留米リサーチパーク<br>福岡県久留米市百年公園1-1（駐車場あり）</dd>
-        <dt>内容</dt><dd>カイロプラクティックとは／美姿勢施術・エクササイズ／美肌体験<br>この日は、美容（美姿勢・美肌）がテーマで、実技も美容的な内容です。</dd>
-        <dt>備考</dt><dd>ペア割・お子さんのお預かりはありません</dd>
-      </dl>
-    </div>
-
-    <p class="note" style="margin:14px 0 20px">※各日程とも少人数制です。<br>※参加できるのは高校生以上の方です。<br>※実技は受講生どうしで行います。</p>
-    <a class="btn" href="https://forms.gle/NNU9E57W4fqY8zD19" target="_blank" rel="noopener">1日講座の日程を選んで申し込む →</a>
-  </div>
-</section>
-
-<!-- 講師 -->
-<section class="alt">
-  <div class="wrap">
-    <h2>講師について</h2>
-    <figure style="max-width:220px;margin:0 auto 18px">
-      <img src="img-teacher.jpg" alt="講師 安藤真奈美" style="border-radius:50%;aspect-ratio:1/1" onerror="this.closest('figure').style.display='none'">
-    </figure>
-    <p class="eyebrow" style="text-align:center">レディースカイロうらら 院長</p>
-    <p style="text-align:center;font-size:20px;font-weight:700;margin-bottom:18px">安藤 真奈美</p>
-    <p>もとは一級建築士。<br>最初は、自分と家族の身体のために学び始めたカイロプラクティック。いつのまにか仕事になり、福津市で開院して12年になります。</p>
-    <p>建物の土台を大切にするように、身体も土台となる骨盤から見ることを大切にしています。体を骨格から見る目と、それを言葉で伝える力。12年の現場で大切にしてきた、その基本をお伝えします。</p>
-  </div>
-</section>
-
-<!-- 1日講座の声 -->
-<section>
-  <div class="wrap">
-    <h2>この講座を受けた方の声</h2>
-    <p class="src" style="text-align:center">1日で学ぶカラダ講座 受講者</p>
-    <div class="voice"><p class="q">「根本のゆがみを整えることが大事だと、すごくよくわかりました」</p></div>
-    <div class="voice"><p class="q">「色んな方とお話しすることができて、視野が広がりました」</p></div>
-    <div class="voice"><p class="q">「楽しかったです。自分の体をもっと知って、病気にならないようにします」</p></div>
-    <div class="voice"><p class="q">「知らなかったことを知れて、久しぶりに学びが楽しいと思えました」</p></div>
-    <p class="note" style="text-align:center">※受講後アンケートより。個人の感想です。</p>
-  </div>
-</section>
-
-<!-- 本格的に学ぶ道筋 -->
-<section id="path">
-  <div class="wrap">
-    <h2>本格的に学ぶ道筋</h2>
-    <p style="text-align:center">1日講座のその先へ。</p>
-    <p>もっと学びたい方には、<br>カイロプラクティックの知識や技術を<br>段階的に学ぶ講座があります。</p>
-    <p>ここから先は、zenkenkai主催のセミナーをご案内します。</p>
-
-    <div class="flow">
-      <ol>
-        <li>1日講座<small>基本を体験する（この講座）</small></li>
-        <li>初級カイロ事業セミナー（3泊4日）<small>カイロプラクティックの基礎と全身の調整の基本</small></li>
-        <li>腰肩集中事業セミナー（4日間）<small>腰・肩に向き合う技術</small></li>
-        <li>中級・美容カイロ<small>希望に応じて</small></li>
-      </ol>
-    </div>
-
-    <p class="note">※zenkenkaiでは、施術料をいただく活動には、腰肩集中事業セミナーまでの修了が必要です。</p>
-
-    <h3 style="margin-top:28px">学んだ方の、今</h3>
-    <p class="src" style="text-align:center">zenkenkaiのセミナーで学び、<br>仕事につなげた方の声（zenkenkai 受講案内資料より）</p>
-
-    <div class="voice">
-      <p class="q">「母のために学び始めました」</p>
-      <p>病気がちな母に施術したいと思い受講。友人や知人の健康相談をするうちに仕事として始め、今はマンションの一室に施術院を構え、出張施術を中心にしています。</p>
-      <p class="by">奈良県</p>
-    </div>
-    <div class="voice">
-      <p class="q">「子どもとの時間も大切にできています」</p>
-      <p>手に職をつけ、子どもとの時間を増やしたいと思い受講。今は、共同施術院で仕事をしています。</p>
-      <p class="by">徳島県</p>
-    </div>
-
-    <details>
-      <summary>ほかの声を見る</summary>
-      <div>
-        <div class="voice" style="background:var(--ivory)">
-          <p class="q">まずは家族や知人から始めました</p>
-          <p>家族や知人を看ることから始め、勉強面のサポート体制が充実していたこともあり、スムーズに事業を始められました。今は自宅以外に2店舗の施術院を開いています。</p>
-          <p class="by">兵庫県</p>
-        </div>
-        <div class="voice" style="background:var(--ivory);margin-bottom:0">
-          <p class="q">自宅で美容カイロのサロンを開いています</p>
-          <p>元々は患者として通い、人生を変えたいと思い受講。まず家族や知人に練習させてもらい、今は自宅で美容カイロサロンを開いています。</p>
-          <p class="by">岐阜県</p>
-        </div>
-      </div>
-    </details>
-    <p class="note">※zenkenkaiの受講案内資料の体験談をもとに、要約して掲載しています。<br>※個人の感想です。結果を保証するものではありません。</p>
-
-    <details>
-      <summary>初級カイロ事業セミナーで学ぶこと</summary>
-      <div>
-        <ul class="dot">
-          <li>基礎知識、検査法・問診票</li>
-          <li>骨盤・腰椎・肩関節・胸椎・頸椎の実習</li>
-          <li>総合指導法、事業としてのカイロ</li>
-        </ul>
-        <p style="margin-top:12px"><b>4日間の流れ</b></p>
-        <p><b>1日目</b>　基礎知識／検査法・問診票／実習（骨盤・腰椎・肩関節、胸椎・頸椎）</p>
-        <p><b>2日目</b>　総合実習／総合指導法／事業としてのカイロ／美容カイロ</p>
-        <p><b>3日目</b>　マスターテスト／カイロビジネス講義／中級・上級セミナーのデモ</p>
-        <p style="margin-bottom:0"><b>4日目</b>　患者様をみるまで／現場での患者様対応／閉講式</p>
+        </details>
+        <p class="note" style="margin-top:12px">※過去の1日講座の受講後アンケートより。</p>
       </div>
     </details>
 
-    <h3 style="margin-top:22px">初級カイロ事業セミナー修了後のサポート</h3>
-    <p>セミナーを受けたあとも、先輩から学ぶインターン制度や地域の勉強会など、学び続けられる環境があります。</p>
-    <p class="note">※サポートの内容・条件は地域によって異なります。</p>
-
-    <p style="margin-top:18px">その先の講座の内容・費用・日程は、<br>1日講座でご案内します。<br>LINEでもお問い合わせいただけます。</p>
-    <div style="margin-top:24px">
-      <a class="btn" href="https://forms.gle/NNU9E57W4fqY8zD19" target="_blank" rel="noopener">1日講座の日程を選んで申し込む →</a>
-    </div>
-
-    <div style="margin-top:18px">
-      <a class="btn-sub" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">初級について、LINEで聞いてみる</a>
-    </div>
-  </div>
-</section>
-
-<!-- 半日版 -->
-<section class="alt">
-  <div class="wrap">
-    <h2>まず身体の見方から<br>知りたい方へ</h2>
-    <div class="card">
-      <span class="tag" style="display:inline-block;background:var(--beige);border-radius:4px;padding:1px 9px;font-size:12px;margin-bottom:4px">半日版（3時間）</span>
-      <p style="font-size:20px;font-weight:700;margin-bottom:4px">5,000円</p>
-      <p style="font-size:14px;margin-bottom:10px">10/17（土）10:00〜13:00／レディースカイロうらら（福津市）</p>
-      <ul class="dot" style="font-size:14px">
-        <li>自分の姿勢を知る</li>
-        <li>姿勢と不調の関係</li>
-        <li>毎日の生活のヒント</li>
+    <!-- ===== 開催日程・お申込み（日程終了後は、該当の <li class="dateitem"> だけ削除） ===== -->
+    <div class="sched" id="schedule">
+      <h3>開催日程・お申込み</h3>
+      <ul class="dates">
+        <li class="dateitem" data-date="2026-10-31">
+          <span class="dd">10/31<small>（土）</small></span>
+          <span class="dk"><b>1日講座</b><br>福岡市博多区</span>
+        </li>
+        <li class="dateitem" data-date="2026-12-20">
+          <span class="dd">12/20<small>（日）</small></span>
+          <span class="dk"><b>1日講座</b><br>福岡市博多区</span>
+        </li>
       </ul>
-      <p class="note" style="margin-top:10px;margin-bottom:0">ペア割：お2人で7,500円／特典：家族優待券 通常6,500円 → 3,000円<br>※10/17は小さなお子さんのお預かりはありません。</p>
+      <dl>
+        <div class="row"><dt>時間</dt><dd>9:45〜16:00</dd></div>
+        <div class="row"><dt>料金</dt><dd>10,000円・お弁当付き<br>ペア割：お2人で15,000円</dd></div>
+        <div class="row"><dt>会場</dt><dd>アクシオン福岡<br>福岡市博多区東平尾公園2丁目1-4<br>駐車場あり</dd></div>
+      </dl>
+      <ul class="perks">
+        <li>後日カラダケア付き</li>
+        <li>小さなお子さんは別室で無料お預かり</li>
+      </ul>
+
+      <p class="apply-lead">ひとつのフォームで、<br>ご希望の日程をお選びいただけます。</p>
+      <a class="btn btn-primary" href="https://forms.gle/t9xWALW6ehwfiWoF9" target="_blank" rel="noopener" data-track="apply_click" data-where="schedule">参加日程を選んで申し込む <span class="arrow">▶</span></a>
+
+      <details>
+        <summary>参加前にご確認ください</summary>
+        <div class="inner">
+          <h4>参加対象</h4>
+          <p>高校生以上の方。<br>男性・女性どちらも参加できます。</p>
+          <h4>持ち物</h4>
+          <p>タオル、筆記具、飲み物</p>
+          <h4>服装</h4>
+          <p>動きやすい服装でお越しください。<br>ジーンズ・フード付きの服はご遠慮ください。<br>靴下をご着用ください。</p>
+          <h4>キャンセル</h4>
+          <p>1日講座はお弁当手配のため、<br>開催日の3日前からのキャンセルは、<br>1,000円のキャンセル料をいただきます。</p>
+        </div>
+      </details>
     </div>
-    <a class="btn" href="https://forms.gle/NNU9E57W4fqY8zD19" target="_blank" rel="noopener">参加日程を選んで申し込む →</a>
+
+    <!-- ===== 半日版（3時間）：日程終了後は、該当の <li class="dateitem"> だけ削除 ===== -->
+    <details class="halffold">
+    <summary>半日版（3時間）もあります｜10/28・11/3</summary>
+    <div class="sched" id="half">
+      <h3>半日版（3時間）</h3>
+      <p class="small" style="margin:-6px 0 12px">10/31のご都合が合わない方や、まず知りたい方に。</p>
+      <ul class="dates">
+        <li class="dateitem"><span class="dd">10/28<small>（水）</small></span><span class="dk"><b>半日版</b><br>福津市</span></li>
+        <li class="dateitem"><span class="dd">11/3<small>（火・祝）</small></span><span class="dk"><b>半日版</b><br>福津市</span></li>
+      </ul>
+      <dl>
+        <div class="row"><dt>時間</dt><dd>10:00〜13:00</dd></div>
+        <div class="row"><dt>料金</dt><dd>5,000円<br>ペア割：お2人で7,500円</dd></div>
+        <div class="row"><dt>定員</dt><dd>各日3名</dd></div>
+        <div class="row"><dt>内容</dt><dd>自分の姿勢を知る／姿勢と不調の関係／毎日の生活のヒント</dd></div>
+        <div class="row"><dt>会場</dt><dd>レディースカイロうらら<br>福津市花見ヶ丘1-9-8 ソレイユ105<br>駐車場あり</dd></div>
+      </dl>
+      <ul class="perks">
+        <li>家族優待券（通常6,500円 → 3,000円）</li>
+        <li>半日版は、お子さんのお預かりがありません</li>
+      </ul>
+      <a class="btn btn-primary" href="https://forms.gle/t9xWALW6ehwfiWoF9" target="_blank" rel="noopener" data-track="apply_click" data-where="half">参加日程を選んで申し込む <span class="arrow">▶</span></a>
+    </div>
+    </details>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="alt">
+<!-- ============ マスター編 ============ -->
+<section id="master" class="course master sec-white">
   <div class="wrap">
-    <h2>よくある質問</h2>
+    <span class="step">マスター編</span>
+    <h2>初級カイロ事業セミナー</h2>
+    <p class="for">学んだことを、仕事につなげたい方へ</p>
+    <div class="price">3泊4日</div>
+    <p class="meta-line">主催：Zenkenkai（全健会）</p>
+    <p>身体の基礎知識から、全身の基本実技、<br>事業としてのカイロまで。<br>じっくり、本格的に学ぶ講座です。</p>
 
-    <p class="faq-q">Q. 施術の経験がなくても大丈夫？</p>
-    <p class="faq-a">A. はい、初めての方向けの内容です。</p>
+    <ul class="learn">
+      <li>基礎知識、検査法・問診票</li>
+      <li>骨盤・腰椎・肩関節・胸椎・頸椎の実習</li>
+      <li>総合指導法</li>
+      <li>事業としてのカイロ</li>
+    </ul>
 
-    <p class="faq-q">Q. 仕事にするかどうか、まだ決めていなくても参加できますか？</p>
-    <p class="faq-a">A. はい。考えている段階の方こそ、体験してから決めていただけます。</p>
+    <p>仕事にするか、まだ決めていない方も、<br>自分や家族のために学びたい方も受講できます。</p>
+    <p>日程・会場・費用は、<br>無料姿勢講座や1日講座でご案内します。<br>LINEでもお気軽にご相談ください。</p>
 
-    <p class="faq-q">Q. 1日でカイロプラクティックの仕事ができるようになりますか？</p>
-    <p class="faq-a">A. いいえ。この講座は基本を体験する入口です。その先は<a href="#path" style="color:var(--green-d);text-decoration:underline">「本格的に学ぶ道筋」</a>をご覧ください。</p>
+    <details data-shokyu style="margin-top:22px">
+      <summary>初級セミナーで学んだ方の今</summary>
+      <div class="inner">
 
-    <p class="faq-q">Q. 1人で参加しても大丈夫？</p>
-    <p class="faq-a">A. 少人数制なので、お1人でも安心です。</p>
+      <div class="voice">
+        <div class="head">家族のための学びが、仕事につながりました</div>
+        <q style="margin-bottom:8px">「母のために学び始めました」</q>
+        <p class="body">病気がちな母に施術したいと思い受講。友人や知人の健康相談をするうちに仕事として始め、今はマンションの一室に施術院を構え、出張施術を中心にしています。</p>
+        <span class="by">（奈良県）</span>
+      </div>
 
-    <p class="faq-q">Q. 小さなお子さんがいても参加できますか？</p>
-    <p class="faq-a">A. 10/18（日）・10/19（月）は、別室で無料でお預かりします。10/17・10/21は、お預かりがありません。</p>
+      <div class="voice">
+        <div class="head">子どもとの時間を、大切にしながら</div>
+        <q style="margin-bottom:8px">「子どもとの時間も大切にできています」</q>
+        <p class="body">手に職をつけ、子どもとの時間を増やしたいと思い受講。今は、共同施術院で仕事をしています。</p>
+        <span class="by">（徳島県）</span>
+      </div>
+
+      <details>
+        <summary>ほかの方の声も読む</summary>
+        <div class="inner">
+          <div class="voice">
+            <q style="margin-bottom:8px">「まずは家族や知人から始めました」</q>
+            <p class="body">家族や知人を看ることから始め、勉強面のサポート体制が充実していたこともあり、スムーズに事業を始められました。今は自宅以外に2店舗の施術院を開いています。</p>
+            <span class="by">（兵庫県）</span>
+          </div>
+          <div class="voice" style="margin-bottom:0">
+            <q style="margin-bottom:8px">「自宅で美容カイロのサロンを開いています」</q>
+            <p class="body">元々は患者として通い、人生を変えたいと思い受講。まず家族や知人に練習させてもらい、今は自宅で美容カイロサロンを開いています。</p>
+            <span class="by">（岐阜県）</span>
+          </div>
+        </div>
+      </details>
+      <p class="note" style="margin-top:12px">※zenkenkaiの受講案内資料の体験談を、要約して掲載しています。<br>※個人の感想であり、結果を保証するものではありません。</p>
+    </div>
+    </details>
 
     <details>
-      <summary>ほかの質問を見る</summary>
-      <div>
-        <p class="faq-q">Q. カイロプラクティックの仕事をよく知らなくても大丈夫？</p>
-        <p class="faq-a">A. はい。どんな仕事なのかを知るところから、体験しながらお伝えします。</p>
-
-        <p class="faq-q">Q. 実技は誰とするのですか？</p>
-        <p class="faq-a">A. 受講生どうしで行います。</p>
-
-        <p class="faq-q">Q. すでにセラピストですが、参加する意味はありますか？</p>
-        <p class="faq-a">A. 今の仕事とは別の、骨格から体を見るカイロプラクティックの考え方を体験できます。</p>
-        <p class="faq-q">Q. 学び方や、仕事につなげるまでの流れを相談できますか？</p>
-        <p class="faq-a">A. はい。個別相談でお話しいただけます。</p>
-        <p class="faq-q">Q. 10/21（久留米）は、ほかの日と内容が違いますか？</p>
-        <p class="faq-a">A. 美容（美姿勢・美肌）がテーマの内容です。カイロプラクティックの考え方に加えて、美姿勢施術・エクササイズ、美肌体験を行います。実技も、美容的な内容になります。参加費は同じ10,000円（昼食付き）です。</p>
-        <p class="faq-q">Q. 半日版と1日版、どちらがいい？</p>
-        <p class="faq-a">A. 手を使った体験まで進みたい方は1日版、まず身体の見方を知りたい方は半日版がおすすめです。</p>
-        <p class="faq-q">Q. 2人で参加すると割引はありますか？</p>
-        <p class="faq-a">A. 10/17（半日）は2人で7,500円、10/18・10/19（1日）は2人で15,000円のペア割があります。10/21は対象外です。</p>
-        <p class="faq-q">Q. 痛みが強いとき、この講座で治せますか？</p>
-        <p class="faq-a" style="margin-bottom:0">A. この講座は診断や治療の場ではありません。強い痛みや長引く痛みは、医療機関にご相談ください。</p>
+      <summary>初級セミナーの4日間の流れ</summary>
+      <div class="inner">
+        <h4>1日目</h4><p>基礎知識／検査法・問診票／実習（骨盤・腰椎・肩関節、胸椎・頸椎）</p>
+        <h4>2日目</h4><p>総合実習／総合指導法／事業としてのカイロ／美容カイロ</p>
+        <h4>3日目</h4><p>マスターテスト／カイロビジネス講義／中級・上級セミナーのデモ</p>
+        <h4>4日目</h4><p>患者様をみるまで／現場での患者様対応／閉講式</p>
       </div>
     </details>
-    <p class="note" style="margin-top:14px">ほかにご不明な点は、講座用LINEでお答えします。</p>
+
+    <details>
+      <summary>修了後のサポートと、その先の学び</summary>
+      <div class="inner">
+        <p>セミナーを受けたあとも、先輩から学ぶインターン制度や、地域の勉強会など、学び続けられる環境があります。<br><span class="note">※サポートの内容・条件は地域によって異なります。</span></p>
+        <p>その先には、腰肩集中事業セミナー（4日間）、中級・美容カイロなどの講座があります。</p>
+        <p>日程・費用・学ぶ期間は、今のお仕事や暮らしに合わせて、無料姿勢講座や1日講座、LINEでご案内します。</p>
+      </div>
+    </details>
+
+    <a class="btn btn-primary" style="margin-top:22px" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener" data-track="line_click" data-where="master">初級セミナーについてLINEで相談する <span class="arrow">▶</span></a>
   </div>
 </section>
 
-<!-- 最後のコピー -->
-<section style="text-align:center">
+<!-- ============ 講師紹介 ============ -->
+<section id="instructor" class="sec-beige">
   <div class="wrap">
-    <h2 style="margin-bottom:10px">健康への興味を、人の役に立つ仕事に。<br>まずは、1日の体験から。</h2>
-    <p class="note" style="margin-bottom:20px">各日程とも少人数制です。</p>
-    <a class="btn" href="https://forms.gle/NNU9E57W4fqY8zD19" target="_blank" rel="noopener">1日講座の日程を選んで申し込む →</a>
-    <p style="margin-top:18px;margin-bottom:10px;font-size:14px">ご質問は講座用LINEからお気軽にどうぞ</p>
-    <a class="btn-sub" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">LINEで質問する</a>
+    <div class="eyebrow">INSTRUCTOR</div>
+    <h2 class="title">講師紹介</h2>
+
+    <div class="profile">
+      <figure class="profile-photo" data-img="profile" style="margin:0">
+        <img alt="安藤真奈美" loading="lazy">
+      </figure>
+      <div>
+        <p class="role">レディースカイロうらら 院長</p>
+        <p class="name">安藤 真奈美</p>
+        <p>もとは一級建築士。</p>
+        <p>最初は、自分と家族の身体のために学び始めたカイロプラクティック。いつのまにか仕事になり、福津市で開院して12年になります。</p>
+        <p>建物の土台を大切にするように、身体も、土台となる骨盤から見ることを大切にしています。</p>
+        <p style="margin-bottom:0">骨格から身体を見る目と、それを言葉で伝える力。12年の現場で大切にしてきた、その基本をお伝えしています。</p>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ============ よくあるご質問 ============ -->
+<section id="faq" class="sec-white">
+  <div class="wrap faq">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="title">よくあるご質問</h2>
+    <details>
+      <summary>施術の経験がなくても大丈夫？</summary>
+      <div class="inner"><p>はい、初めての方向けの内容です。<br>カイロプラクティックの仕事をよく知らない方も、どんな仕事なのかを知るところから、体験しながらお伝えします。</p></div>
+    </details>
+    <details>
+      <summary>仕事にするかどうか、まだ決めていなくても参加できますか？</summary>
+      <div class="inner"><p>はい。考えている段階の方こそ、体験してから決めていただけます。</p></div>
+    </details>
+    <details>
+      <summary>1日でカイロプラクティックの仕事ができるようになりますか？</summary>
+      <div class="inner"><p>いいえ。この講座は、基本を体験する入口です。その先は、マスター編の初級セミナーをご覧ください。</p></div>
+    </details>
+    <details>
+      <summary>半日版と1日版、どちらがいい？</summary>
+      <div class="inner"><p>手を使った実技の体験まで進みたい方は1日版、まず身体の見方を知りたい方は半日版がおすすめです。</p></div>
+    </details>
+    <details>
+      <summary>1人で参加しても大丈夫？</summary>
+      <div class="inner"><p>少人数制なので、お1人での参加も安心です。</p></div>
+    </details>
+    <details>
+      <summary>何歳から参加できますか？</summary>
+      <div class="inner"><p>高校生以上の方が参加できます。</p></div>
+    </details>
+    <details>
+      <summary>子どもを連れて参加できますか？</summary>
+      <div class="inner"><p>1日版の10/31（土）・12/20（日）は、小さなお子さんを別室で無料でお預かりします。<br>半日版の10/28（水）・11/3（火・祝）は、お預かりがありません。</p></div>
+    </details>
+    <details>
+      <summary>実技は誰とするのですか？</summary>
+      <div class="inner"><p>受講生どうしで行います。</p></div>
+    </details>
+    <details>
+      <summary>すでにセラピストですが、参加する意味はありますか？</summary>
+      <div class="inner"><p>今のお仕事とは別の、骨格から身体を見るカイロプラクティックの考え方を体験できます。</p></div>
+    </details>
+    <details>
+      <summary>学び方や、仕事につなげるまでの流れを相談できますか？</summary>
+      <div class="inner"><p>はい。1日講座の個別相談や、LINEでお話しいただけます。</p></div>
+    </details>
+    <details>
+      <summary>2人で参加すると割引はありますか？</summary>
+      <div class="inner"><p>半日版の10/28（水）・11/3（火・祝）は2人で7,500円、<br>1日版の10/31（土）・12/20（日）は2人で15,000円のペア割があります。</p></div>
+    </details>
+    <details>
+      <summary>痛みが強いとき、この講座で治せますか？</summary>
+      <div class="inner"><p>この講座は診断や治療の場ではなく、カイロプラクティックの基本を体験して学ぶ場です。<br>強い痛みや長引く痛みは、医療機関にご相談ください。</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ 最終CTA ============ -->
+<section class="final" id="entry">
+  <div class="wrap">
+    <h2>健康への興味を、<br>人の役に立つ仕事に。<br>まずは、1日の体験から。</h2>
+    <p class="lines">各日程とも少人数制です。<br>どんな仕事かを知るところから、<br>体験しながらお伝えします。</p>
+    <div class="btn-stack">
+      <a class="btn btn-primary" href="#schedule" data-track="final_cta">日程・お申込みへ <span class="arrow">▶</span></a>
+    </div>
+    <p style="margin-top:26px;margin-bottom:0">ご質問や、学び方の相談は</p>
+    <div class="btn-stack" style="margin-top:8px">
+      <a class="btn btn-ghost" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener" data-track="line_click" data-where="final">LINEで相談する <span class="arrow">▶</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <div class="wrap">
-    <p style="margin-bottom:4px">レディースカイロうらら　姿勢と健康の講座</p>
-    <p style="margin-bottom:4px">運営：レディースカイロうらら　院長 安藤真奈美</p>
-    <p style="margin-bottom:12px">福岡県福津市花見ヶ丘1-9-8 ソレイユ105</p>
-    <p style="font-size:12px;opacity:.8;margin:0">初級カイロ事業セミナー等の主催はzenkenkaiです。</p>
+    <b>講座案内・運営　レディースカイロうらら／安藤 真奈美</b>
+    福岡県福津市花見ヶ丘1-9-8 <span class="nw">ソレイユ105</span><br>
+    <span style="display:block;margin-top:10px;font-size:12.5px">※初級カイロ事業セミナーの主催は、<br>Zenkenkai（全健会）です。</span>
   </div>
 </footer>
 
-<div class="sticky">
-  <a class="btn" href="https://forms.gle/NNU9E57W4fqY8zD19" target="_blank" rel="noopener">1日講座に申し込む</a>
-</div>
+<!-- 画面下の3講座タブ（ファーストビューを過ぎたら表示／いま見ている講座に色がつきます） -->
+<nav class="tabs" id="tabs" aria-label="講座へ移動" aria-hidden="true">
+  <a class="free" href="#free" data-sec="free" data-track="tab_click" data-where="free" tabindex="-1">体験編<b>無料姿勢講座</b></a>
+  <a class="one" href="#oneday" data-sec="oneday" data-track="tab_click" data-where="oneday" tabindex="-1">実践編<b>1日講座</b></a>
+  <a class="master" href="#master" data-sec="master" data-track="tab_click" data-where="master" tabindex="-1">マスター編<b>初級セミナー</b></a>
+</nav>
 
+<script>
+/* =====================================================
+   設定（ここだけ書き換えれば、ページ本体は触らずに済みます）
+   ===================================================== */
+var CONFIG = {
+  // 計測：空のままなら何も読み込みません。IDが決まったら、ここに入れるだけで有効になります。
+  ga4MeasurementId: "G-YRFB78B925",     // 例："G-XXXXXXXXXX"
+  metaPixelId: "",          // 例："1234567890123456"
+
+  // 写真：index.html と同じ場所（リポジトリの一番上）に置いたファイル名です。
+  // 別の写真に替えるときは、ここのファイル名を書き換えます（空にすると、その枠は表示されません）。
+  // LP2〜4に置いてある写真をそのまま使うときは、https://urarafkt-ai.github.io/karada-lp/ファイル名 のように書けます。
+  images: {
+    model:    "photo-model.jpg",     // 骨格模型を使ってカイロプラクティックの基本を説明する安藤真奈美
+    lecture:  "photo-lecture.jpg",   // 受講生に向けて説明する安藤真奈美
+    practice: "photo-practice.jpg",  // マットで実技を行う受講の様子
+    profile:  "photo-profile.jpg"   // 安藤真奈美（講師紹介）
+  },
+
+  // 参加者の声：非表示にしたいときは false にします。
+  showSurveyVoices: true,   // 1日講座に参加された方の声（アンケート）
+  showShokyuVoices: true    // 初級セミナーで学んだ方の今
+};
+</script>
+<script>
+(function(){
+  "use strict";
+
+  /* ---- 写真の差し込み（パス未設定の枠は非表示） ---- */
+  document.querySelectorAll("[data-img]").forEach(function(fig){
+    var key = fig.getAttribute("data-img");
+    var src = (CONFIG.images && CONFIG.images[key]) || "";
+    var img = fig.querySelector("img");
+    if(!src){ fig.parentNode && fig.parentNode.removeChild(fig); return; }
+    img.src = src;
+  });
+  // 写真が1枚もなければ、ギャラリーの枠ごと消す
+  var g = document.getElementById("gallery");
+  if(g && !g.querySelector("figure")){ g.parentNode.removeChild(g); }
+  // 講師写真がなければ、講師紹介を1列にする
+  var prof = document.querySelector(".profile");
+  if(prof && !prof.querySelector("figure")){ prof.style.display = "block"; }
+
+  /* ---- 声の表示切替 ---- */
+  if(!CONFIG.showSurveyVoices){
+    document.querySelectorAll("[data-survey]").forEach(function(el){ el.parentNode.removeChild(el); });
+  }
+  if(!CONFIG.showShokyuVoices){
+    document.querySelectorAll("[data-shokyu]").forEach(function(el){ el.parentNode.removeChild(el); });
+  }
+
+  /* ---- 計測（GA4 / Meta Pixel）：IDがあるときだけ読み込む ---- */
+  window.dataLayer = window.dataLayer || [];
+  if(CONFIG.ga4MeasurementId){
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(CONFIG.ga4MeasurementId);
+    document.head.appendChild(s);
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", CONFIG.ga4MeasurementId);
+  }
+  if(CONFIG.metaPixelId){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+    window.fbq("init", CONFIG.metaPixelId);
+    window.fbq("track", "PageView");
+  }
+
+  function track(name, where){
+    try{
+      if(window.gtag){ window.gtag("event", name, { link_location: where || "" }); }
+      if(window.fbq){
+        if(name === "apply_click"){ window.fbq("track", "Lead", { content_name: where || "" }); }
+        else if(name === "line_click"){ window.fbq("track", "Contact", { content_name: where || "" }); }
+        else { window.fbq("trackCustom", name, { where: where || "" }); }
+      }
+    }catch(e){}
+  }
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("[data-track]");
+    if(!a) return;
+    track(a.getAttribute("data-track"), a.getAttribute("data-where") || "");
+  });
+
+  /* ---- 画面下の3講座タブ：ファーストビューを過ぎたら表示／いま見ている講座を強調 ---- */
+  var tabs = document.getElementById("tabs");
+  var hero = document.getElementById("top");
+  var links = tabs ? tabs.querySelectorAll("a") : [];
+  function setShow(show){
+    if(!tabs) return;
+    tabs.classList.toggle("show", show);
+    tabs.setAttribute("aria-hidden", show ? "false" : "true");
+    links.forEach(function(l){ l.tabIndex = show ? 0 : -1; });
+  }
+  if(tabs){
+    if("IntersectionObserver" in window){
+      new IntersectionObserver(function(es){ setShow(!es[0].isIntersecting); }, { threshold: 0.02 }).observe(hero);
+
+      var current = "";
+      function mark(id){
+        current = id;
+        links.forEach(function(l){ l.classList.toggle("on", l.getAttribute("data-sec") === id); });
+      }
+      var secObs = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ mark(e.target.id); } });
+      }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+      ["free","oneday","master"].forEach(function(id){
+        var el = document.getElementById(id); if(el){ secObs.observe(el); }
+      });
+      // 3講座の外（講師・FAQなど）に出たら、強調を外す
+      var after = document.getElementById("instructor");
+      if(after){
+        new IntersectionObserver(function(es){ if(es[0].isIntersecting){ mark(""); } }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 }).observe(after);
+      }
+    } else {
+      setShow(true);
+    }
+  }
+})();
+</script>
 </body>
 </html>
