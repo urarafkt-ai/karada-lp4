@@ -80,6 +80,9 @@ a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid var(-
 .kosa-banner span{display:block;font-size:19px;font-weight:700}
 .kosa-banner small{display:block;font-size:13px;margin-top:2px;opacity:.95}
 .kosa-banner .btn{background:#fff;color:var(--sage-deep);margin-top:12px;border-color:#fff}
+.kosa-banner .kb-pull{font-size:15.5px;font-weight:700;margin:8px 0 6px;opacity:1}
+.direct-note{margin:-6px 2px 14px;font-size:12.5px;color:var(--brown-soft);line-height:1.7}
+.direct-note a{color:var(--sage-deep);text-decoration:underline}
 .kosa-banner .kb-note{margin-top:10px;font-size:12.5px;opacity:.9}
 .hero-photo{margin:0 0 14px}
 .hero-photo img{width:100%;border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;background:var(--beige)}
@@ -111,6 +114,9 @@ a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid var(-
 .path .p-sub{grid-area:sub;font-size:13px;line-height:1.6;color:var(--brown-soft);font-weight:500;margin-top:2px}
 .path .p-go{grid-area:go;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:700;color:var(--c);line-height:1.3;white-space:nowrap}
 .path .p-arrow{width:34px;height:34px;border-radius:50%;background:var(--c);color:var(--white);display:grid;place-items:center;font-size:18px;line-height:1}
+.path.slim .p-copy,.path.slim .p-go{display:none}
+.path.slim .p-title{font-size:18px}
+.path.slim .p-sub{margin-top:0}
 .paths-note{margin:12px 2px 0;font-size:14px;color:var(--brown-soft);line-height:1.8}
 
 /* きっかけ */
@@ -249,7 +255,8 @@ h1,h2{text-wrap:balance}
   <div class="wrap">
     <div class="regions"><span class="region">福岡・福津</span><span class="region-sub">健康・身体に興味がある方へ</span></div>
     <h1><span class="l1">健康のこと、身体のこと。</span>その興味を、<br>人の役に立つ仕事へ。</h1>
-    <div class="kosa-banner"><b>仕事に興味がある方への、ご案内</b><span>無料 お仕事説明会＆体験会</span><small>約90分・マンツーマン・福津市<br>性別・経験 不問（高校生以上）</small><a class="btn" href="https://calendar.app.google/HbwF1YYNr8htry1c6" target="_blank" rel="noopener" data-track="apply_click" data-where="hero_free">日時を選んで予約する <span class="arrow">▶</span></a><small class="kb-note">仕事にするか、決めていなくても大丈夫です。<br>講師：安藤真奈美（福津市で12年）</small></div>
+    <div class="kosa-banner"><b>仕事に興味がある方への、ご案内</b><span>無料 お仕事説明会＆体験会</span><small class="kb-pull">自分の身体を見てもらいながら、<br>この仕事のことも聞けます。</small><small>約90分・マンツーマン・福津市<br>経験不問（高校生以上）</small><a class="btn" href="https://calendar.app.google/HbwF1YYNr8htry1c6" target="_blank" rel="noopener" data-track="apply_click" data-where="hero_free">日時を選んで予約する <span class="arrow">▶</span></a><small class="kb-note">聞いてみるだけでも大丈夫です。<br>講座のお申込みは、その場で決めなくて構いません。</small></div>
+    <p class="direct-note">説明会なしで、<a href="#oneday">1日講座から参加する</a>こともできます。</p>
 
     <figure class="hero-photo" data-img="model">
       <img alt="骨格模型を使ってカイロプラクティックの基本を説明する安藤真奈美" fetchpriority="high">
@@ -257,9 +264,9 @@ h1,h2{text-wrap:balance}
     </figure>
 
     <div class="about">
-      <div class="about-t">経験は、いりません</div>
-      <p>「そんな仕事があるなら、やってみたい。」</p>
-      <p><b>カイロプラクティックがどんな仕事なのかを、お話と体験で知る、無料の説明会です。</b></p>
+      <div class="about-t">カイロプラクティックは、どんな仕事？</div>
+      <p>背骨や骨盤に着目して、手で身体を整えていく方法です。体操・食事・生活習慣など、身体全体から健康を考えます。</p>
+      <p>施術院を構える人、自宅や出張で始める人、共同の施術院で働く人。<b>働き方は、いろいろです。</b></p>
     </div>
 
     <p class="paths-t">まずは説明会から。その先の道筋</p>
@@ -271,14 +278,14 @@ h1,h2{text-wrap:balance}
         <span class="p-sub">約90分・マンツーマン・予約制</span>
         <span class="p-go"><span class="p-arrow" aria-hidden="true">›</span>内容を見る</span>
       </a>
-      <a class="path one" href="#oneday" data-track="path_click" data-where="oneday">
+      <a class="path one slim" href="#oneday" data-track="path_click" data-where="oneday">
         <span class="p-top"><span class="p-step">実践編</span><span class="p-meta">10,000円・お弁当付き</span></span>
         <b class="p-title">1日講座</b>
         <span class="p-copy">実技まで、1日で体験したい方へ</span>
         <span class="p-sub">10/31（土）｜12/20（日）もあります</span>
         <span class="p-go"><span class="p-arrow" aria-hidden="true">›</span>内容を見る</span>
       </a>
-      <a class="path master" href="#master" data-track="path_click" data-where="master">
+      <a class="path master slim" href="#master" data-track="path_click" data-where="master">
         <span class="p-top"><span class="p-step">マスター編</span><span class="p-meta">3泊4日</span></span>
         <b class="p-title">初級セミナー</b>
         <span class="p-copy">仕事につなげたい方へ</span>
@@ -286,7 +293,7 @@ h1,h2{text-wrap:balance}
         <span class="p-go"><span class="p-arrow" aria-hidden="true">›</span>内容を見る</span>
       </a>
     </nav>
-    <p class="paths-note">1日講座から始めることもできます。</p>
+    
   </div>
 </header>
 
@@ -303,7 +310,6 @@ h1,h2{text-wrap:balance}
       <div class="kk">いつか自宅で<br>施術院を持ちたい</div>
     </div>
     <p class="kk-end">カイロプラクティックが仕事になることを、知らなかった。そんな方も、少なくありません。まずは、どんな仕事なのかを知ってみる。続けるかどうかは、そのあとで考えても大丈夫です。</p>
-    <div class="chirobox" style="margin-top:20px"><b>カイロプラクティックは、どんな仕事？</b><br>背骨や骨盤に着目して、手で身体を整えていく方法です。体操・食事・生活習慣など、身体全体から健康を考えます。施術だけでなく、毎日の身体づくりも支える仕事です。</div>
   </div>
 </section>
 
@@ -313,12 +319,12 @@ h1,h2{text-wrap:balance}
     <span class="step">体験編</span>
     <h2>無料 お仕事説明会＆体験会</h2>
     <p class="for">カイロプラクティックがどんな仕事か、まず知りたい方へ</p>
-    <p>お話を聞いて、姿勢チェックと施術を受けて、<br>カイロプラクティックがどんな仕事なのかを知る時間です。</p>
+    <p>自分の身体を見てもらいながら、<br>カイロプラクティックがどんな仕事なのかを聞ける時間です。</p>
     <ul class="learn">
+      <li>姿勢チェックと、施術を受ける体験</li>
       <li>カイロプラクティックは、どんな仕事か</li>
       <li>未経験から、どう学んでいくか</li>
       <li>仕事を始めるまでの流れと、初級セミナーの費用</li>
-      <li>姿勢チェックと、施術を受ける体験</li>
     </ul>
     <div class="price">約90分／マンツーマン／無料</div>
     <p class="note" style="margin:10px 0 0">ご家族・ご友人の同席も可能です。<br>そのあと、続けて学びたい方には、1日講座や初級セミナーもご案内します。説明会だけの参加でも大丈夫です。</p>
